@@ -1,0 +1,13 @@
+package: experimental/proxy
+version: '1.0-dev'
+author: 'Friends Of REDAXO'
+supportpage: https://github.com/FriendsOfREDAXO/experimental
+
+requires:
+    redaxo: ^5.7.0
+    php:
+        version: '^7.3'
+
+cache_expiration: 300
+allowed_urls:
+    - '*//example.com/*'
