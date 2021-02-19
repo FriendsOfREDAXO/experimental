@@ -18,7 +18,7 @@ final class rex_proxy_cache
 
         $cached = rex_file::get($file);
         if ($cached) {
-            [$content, $contentType, $storeTime] = unserialize($cached);
+            [$content, $contentType, $storeTime] = unserialize($cached, false /* disallow classes */);
 
             if (self::isExpired($storeTime)) {
                 // existing cache expired
